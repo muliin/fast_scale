@@ -161,7 +161,7 @@ NumPy ndarray  ◄──零拷贝──►  float* 指针
 
 ##  来源与致谢
 
-本项目复现自 **[AllinfraGuide](https://caomaoluofei.github.io/AllinfraGuide/)** 第 10 章“综合实战：给 Python 添加一个 C++ 算子”。
+本项目复现自 **[AllinfraGuide](https://caomaolufei.github.io/AIInfraGuide/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/%E7%AC%AC1%E7%AB%A0-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/#10-%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98%E7%BB%99-python-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA-c-%E7%AE%97%E5%AD%90)** 第 10 章“综合实战：给 Python 添加一个 C++ 算子”。
 
 - 原教程作者：caomaoluofei
 - 原教程地址：https://caomaoluofei.github.io/AllinfraGuide/
@@ -172,14 +172,8 @@ NumPy ndarray  ◄──零拷贝──►  float* 指针
 
 ##  注意事项
 
-- 本项目仅用于教学与技术交流，不用于商业用途。
 - 使用 `py::array_t` 时，输入数组的 `dtype` 必须是 `float32`。
 - 原地修改版本 `scale_inplace` 会直接修改输入数组，调用前请确认这是预期行为。
 - 如果传入只读数组或非一维数组，C++ 会抛出 `RuntimeError`，Python 端可捕获。
 
-##  许可
 
-MIT License
-
-> **注意**：本项目的改进部分（零拷贝实现、跨平台构建配置）采用 MIT 许可。  
-> 原教程相关内容的版权归原作者所有，使用前请遵循原教程的许可条款。

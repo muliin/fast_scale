@@ -3,29 +3,25 @@
   "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
   "configurePresets": [
     {
-      "name": "msvc-x64",
-      "displayName": "MSVC x64 (Visual Studio 2026)",
-      "generator": "Visual Studio 18 2026",
-      "architecture": { "value": "x64", "strategy": "set" },
+      "name": "default",
+      "displayName": "Default Config",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "Python_EXECUTABLE": "$env{LOCALAPPDATA}/Programs/Python/Python312/python.exe",
-        "pybind11_DIR": "$env{LOCALAPPDATA}/Programs/Python/Python312/Lib/site-packages/pybind11/share/cmake/pybind11"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
       }
     }
   ],
   "buildPresets": [
     {
-      "name": "msvc-x64-release",
+      "name": "release",
       "displayName": "Release",
-      "configurePreset": "msvc-x64",
+      "configurePreset": "default",
       "configuration": "Release"
     },
     {
-      "name": "msvc-x64-debug",
+      "name": "debug",
       "displayName": "Debug",
-      "configurePreset": "msvc-x64",
+      "configurePreset": "default",
       "configuration": "Debug"
     }
   ]

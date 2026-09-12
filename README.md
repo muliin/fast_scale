@@ -137,7 +137,7 @@ print(arr2)
 ## 项目结构
 
 ```text
-.
+.fast_scale
 ├── CMakeLists.txt
 ├── CMakePresets.json
 ├── scale.cpp

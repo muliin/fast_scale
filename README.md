@@ -164,7 +164,7 @@ NumPy ndarray  ◄──零拷贝──►  float* 指针
 本项目复现自 **[AllinfraGuide](https://caomaolufei.github.io/AIInfraGuide/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/%E7%AC%AC1%E7%AB%A0-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/#10-%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98%E7%BB%99-python-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA-c-%E7%AE%97%E5%AD%90)** 第 10 章“综合实战：给 Python 添加一个 C++ 算子”。
 
 - 原教程作者：caomaoluofei
-- 原教程地址：https://caomaolufei.github.io/AIInfraGuide/guides/
+- 原教程地址：https://caomaolufei.github.io/AIInfraGuide/
 - 本项目的代码根据教程思路自行编写与整理，并在此基础上改进了零拷贝方案。
 - 部分概念与接口设计参考原教程，版权归原作者所有。
 

@@ -2,7 +2,7 @@
 
 一个 **C++ / Python 混合编程示例**：使用 `pybind11` 将 C++ 函数暴露给 Python 调用，并实现 **真正的零拷贝** 数组操作。
 
-本项目复现自 **[AllinfraGuide](https://caomaolufei.github.io/AIInfraGuide/)** 第 10 章，并在原教程基础上改进了 **自动类型转换导致的深拷贝开销**，使用 `py::array_t` 直接操作 NumPy 底层内存。
+本项目复现自 **[AllinfraGuide](https://caomaolufei.github.io/AIInfraGuide/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/%E7%AC%AC1%E7%AB%A0-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/#10-%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98%E7%BB%99-python-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA-c-%E7%AE%97%E5%AD%90)** 第 10 章，并在原教程基础上改进了 **自动类型转换导致的深拷贝开销**，使用 `py::array_t` 直接操作 NumPy 底层内存。
 
 ##  特性
 

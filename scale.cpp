@@ -1,9 +1,14 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>   
+#include <pybind11/stl.h> 
 
 #include <cstddef>
+#include <vector>
 
 namespace py = pybind11;
+
+//zero-copy version
+
 
 // In-place scale (true zero-copy)
 
@@ -49,6 +54,19 @@ py::array_t<float> scale_new(py::array_t<float> input, float factor) {
     return output;  
 }
 
+
+//legacy version (copying data)
+
+std::vector<float> scale_legacy(const std::vector<float>& input, float factor) {
+    std::vector<float> output;
+    output.reserve(input.size());
+    for (float value : input) {
+        output.push_back(value * factor);
+    }
+    return output;
+}
+
+
 PYBIND11_MODULE(fast_scale, module) {
     module.def("scale_inplace", &scale_inplace,
                pybind11::arg("input"),
@@ -59,4 +77,9 @@ PYBIND11_MODULE(fast_scale, module) {
                pybind11::arg("input"),
                pybind11::arg("factor"),
                "Return a new scaled NumPy array");
+    
+    module.def("scale_legacy", &scale_legacy,
+               pybind11::arg("input"),
+               pybind11::arg("factor"),
+               "Legacy version using std::vector (with deep copies)");
 }
